@@ -1,0 +1,114 @@
+ body { margin: auto;
+position: absolute;
+background-size: cover;
+top: 0;
+left:0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+} 
+
+
+@font-face {
+    font-family: Supermario;
+    src: url(SuperMarioBros-ov7d.ttf);
+}
+@font-face {
+    font-family: Supermario2;
+    src: url(supermario.ttf);
+}
+@font-face {
+    font-family: supermario3;
+    src: url(supermario3.ttf);
+}
+
+
+.Encabezado{
+    position: relative;
+    /* width: 100%;
+    margin: auto; */
+}
+
+h1{ 
+
+    margin: auto;
+    color: rgb(247, 6, 255);
+    font-family: supermario;
+    width: 100%;
+   height: 100%;
+   background: rgb(0, 0, 0); 
+   font-size: 50px;
+   /* font-weight: 30; */
+   mix-blend-mode: multiply;
+   
+   
+}
+video{
+    /* margin: auto; */
+    position: absolute;
+    top: 0px;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.Buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    /* transform: translate(-50%,-50%); */
+    background: rgb(0, 162, 255);
+    padding: 5px;
+    height: 35px;
+    /* width: %; */
+    border-radius: 40px;
+
+
+}
+.BusacadorTexto{
+    border: none;
+        background: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+        float: left;
+        line-height: 20px;
+        transition: .3s;
+        width: 0;
+
+}
+
+    
+    .material-symbols-outlined{
+       width: 30px;
+       height: 30px;
+       text-decoration: none;
+       color: white;
+       font-size: 30px;
+    }
+    /* Responsive */
+    @media screen and (min-width:480px){
+        .Buscador:hover> .BusacadorTexto{
+            width: 190px;
+        }
+    }
+    @media screen and (min-width:768px){
+        .Buscador:hover> .BusacadorTexto{
+            width: 3000spx;
+        }
+    }
+
+    @media screen and (min-width:1024px){
+        .Buscador:hover> .BusacadorTexto{
+            width: 500px;
+        }
+    }
+
+
+
+
+
