@@ -1,0 +1,174 @@
+body{
+    margin:0;
+    padding: 0;
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+
+@font-face {
+    font-family: Supermario;
+    src: url(SuperMarioBros-ov7d.ttf);
+}
+
+/* Encabezado */
+.contenedor{
+    position: relative;
+    border-color: red;
+    border-style: double;
+    height: 200px;
+}
+.contenedor #video{
+    position: absolute; 
+    top: 0px;
+    left:0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.contenedor #texto{ 
+    color: fuchsia;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    font-family: supermario;
+    font-size: 15vw;
+    mix-blend-mode: exclusion;
+}
+/* Navegacion de encabezado */
+.contenedor a{
+    font-family: Supermario;
+    color: white;
+    top: 150px;
+    position: relative;
+    text-decoration: none;
+    margin: 2vw 3vw;
+    font-size:4vw;
+    transition: 0.3s;
+}
+.contenedor a:hover{
+    margin:0;
+    font-size: 4.5vw;
+  border: white solid;
+
+}
+
+/* Busacador */
+.search{
+    position:relative;
+    height:30px;
+    width:100vw;
+ 
+
+}
+.search #lupa{
+    font-family: Supermario;
+    font-size: 2vw; 
+    color: fuchsia;
+    position: absolute;
+    margin:0 10vw;
+    width: 80vw;
+    height: 30px;
+    border-radius:50px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0.35);
+    display:flex;
+    justify-content:center;
+    /* align-items: center; */
+    transition: 0.3s;
+    overflow: hidden;
+}
+.search #lupa i{
+    position:absolute;
+    top: 5px;
+    transition:0.3s;
+}
+.search input{
+    color: fuchsia;
+    border:2px fuchsia solid;
+  transition: 0.3s;
+    position: absolute;
+    top:25px;
+     margin:7px 10vw;
+    width: 50vw;
+    height: 10px;
+    border-radius:50px;
+    font-size: 20px;
+    font-family: Supermario;
+
+}
+.search #lupa:hover{
+    height: 65px;
+
+}
+.search #lupa i:hover{
+    border-bottom: 3px solid fuchsia;
+}
+.search input:hover{
+    border-color: fuchsia;
+    height:20px;
+}
+
+    /* Responsive */
+
+    @media screen and (min-width:630px){
+
+        .contenedor #texto{
+            margin-top: 30px;
+
+        }
+        .contenedor a{
+            font-size:2.8vw;
+            margin:1.8vw 2.8vw;
+         
+        }
+        .contenedor a:hover{ 
+            font-size: 3.5vw;
+        }
+    }
+    @media screen and (max-width:680px){
+        .search #lupa{
+            font-size:4vw;
+        }
+
+    }
+
+    @media screen and (max-width:480px){
+      
+        .contenedor #texto{
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translatex(-50%);
+            font-size: 17vw;
+        }
+    }
+    @media screen and (min-width:750px){
+
+        .contenedor a{
+            margin: 1.5vw 2.5vw;
+
+        }
+    }
+    @media screen and (min-width:850px){
+        .contenedor #texto{
+            margin-top:5px;
+            font-size: 12vw;
+        }
+        .contenedor a{ font-size: 2.5vw;
+            margin: 1.3vw 2.3vw;
+        }
+         .contenedor a:hover{
+            font-size: 3vw;
+         }
+        }
+    
+
+
+
+
+
