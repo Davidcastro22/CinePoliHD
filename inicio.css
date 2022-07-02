@@ -1,114 +1,169 @@
- body { margin: auto;
-position: absolute;
-background-size: cover;
-top: 0;
-left:0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-} 
+body{
+    margin:0;
+    padding: 0;
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    background-size: cover;
+    min-height: 100vh;
+
+}
 
 
 @font-face {
     font-family: Supermario;
     src: url(SuperMarioBros-ov7d.ttf);
 }
-@font-face {
-    font-family: Supermario2;
-    src: url(supermario.ttf);
-}
-@font-face {
-    font-family: supermario3;
-    src: url(supermario3.ttf);
-}
 
-
-.Encabezado{
+/* Encabezado */
+.contenedor{
     position: relative;
-    /* width: 100%;
-    margin: auto; */
+    border-color: red;
+    border-style: double;
+    height: 200px;
 }
-
-h1{ 
-
-    margin: auto;
-    color: rgb(247, 6, 255);
-    font-family: supermario;
-    width: 100%;
-   height: 100%;
-   background: rgb(0, 0, 0); 
-   font-size: 50px;
-   /* font-weight: 30; */
-   mix-blend-mode: multiply;
-   
-   
-}
-video{
-    /* margin: auto; */
-    position: absolute;
+.contenedor #video{
+    position: absolute; 
     top: 0px;
     left:0;
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-    
 }
 
-.Buscador{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contenedor #texto{ 
+    color: fuchsia;
+    margin-top: 10px;
     position: absolute;
-    right: 0%;
-    /* transform: translate(-50%,-50%); */
-    background: rgb(0, 162, 255);
-    padding: 5px;
-    height: 35px;
-    /* width: %; */
-    border-radius: 40px;
-
+    left: 50%;
+    transform: translatex(-50%);
+    font-family: supermario;
+    font-size: 15vw;
+    mix-blend-mode: exclusion;
+}
+/* Navegacion de encabezado */
+.contenedor a{
+    font-family: Supermario;
+    color: white;
+    top: 150px;
+    position: relative;
+    text-decoration: none;
+    margin: 2vw 3vw;
+    font-size:4vw;
+    transition: 0.3s;
+}
+.contenedor a:hover{
+    margin:0;
+    font-size: 4.5vw;
+  border: white solid;
 
 }
-.BusacadorTexto{
-    border: none;
-        background: none;
-        outline: none;
-        color: white;
-        font-size: 20px;
-        float: left;
-        line-height: 20px;
-        transition: .3s;
-        width: 0;
+
+/* Busacador */
+.search{
+    position:relative;
+    height:30px;
+    width:100vw;
+ 
 
 }
+.search #lupa{
+    font-family: Supermario;
+    font-size: 2vw; 
+    color: fuchsia;
+    position: absolute;
+    margin:0 10vw;
+    width: 80vw;
+    height: 30px;
+    border-radius:50px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0.35);
+    display:flex;
+    justify-content:center;
+    /* align-items: center; */
+    transition: 0.3s;
+    overflow: hidden;
+}
+.search #lupa i{
+    position:absolute;
+    top: 5px;
+    transition:0.3s;
+}
+.search input{
+    color: fuchsia;
+    border:2px fuchsia solid;
+  transition: 0.3s;
+    position: absolute;
+    top:25px;
+     margin:7px 10vw;
+    width: 50vw;
+    height: 10px;
+    border-radius:50px;
+    font-size: 20px;
+    font-family: Supermario;
 
-    
-    .material-symbols-outlined{
-       width: 30px;
-       height: 30px;
-       text-decoration: none;
-       color: white;
-       font-size: 30px;
-    }
+}
+.search #lupa:hover{
+    height: 65px;
+
+}
+.search #lupa i:hover{
+    border-bottom: 3px solid fuchsia;
+}
+.search input:hover{
+    border-color: fuchsia;
+    height:20px;
+}
+
     /* Responsive */
-    @media screen and (min-width:480px){
-        .Buscador:hover> .BusacadorTexto{
-            width: 190px;
+
+    @media screen and (min-width:630px){
+
+        .contenedor #texto{
+            margin-top: 30px;
+
+        }
+        .contenedor a{
+            font-size:2.8vw;
+            margin:1.8vw 2.8vw;
+         
+        }
+        .contenedor a:hover{ 
+            font-size: 3.5vw;
         }
     }
-    @media screen and (min-width:768px){
-        .Buscador:hover> .BusacadorTexto{
-            width: 3000spx;
+    @media screen and (max-width:680px){
+        .search #lupa{
+            font-size:4vw;
         }
+
     }
 
-    @media screen and (min-width:1024px){
-        .Buscador:hover> .BusacadorTexto{
-            width: 500px;
+    @media screen and (max-width:480px){
+      
+        .contenedor #texto{
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translatex(-50%);
+            font-size: 17vw;
         }
     }
+    @media screen and (min-width:750px){
 
+        .contenedor a{
+            margin: 1.5vw 2.5vw;
 
-
-
-
+        }
+    }
+    @media screen and (min-width:850px){
+        .contenedor #texto{
+            margin-top:5px;
+            font-size: 12vw;
+        }
+        .contenedor a{ font-size: 2.5vw;
+            margin: 1.3vw 2.3vw;
+        }
+         .contenedor a:hover{
+            font-size: 3vw;
+         }
+        }
+    
