@@ -1,2 +1,0 @@
-# CinePoliHD
-Mi primera pagina
