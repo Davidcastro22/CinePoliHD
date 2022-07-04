@@ -192,15 +192,15 @@ body{
         --transition: clip-path .3s;
     }
     .galeryimg:nth-child(1){
-        background-image: url(/Estilos/img/doctor\ strange\ poster.jpg);
+        background-image: url(img/doctor\ strange\ poster.jpg);
         --message:"Doctor Strange";
     }
     .galeryimg:nth-child(2){
-        background-image: url(/Estilos/img/capitan\ marvels.jpg);
+        background-image: url(img/capitan\ marvels.jpg);
         --message:"Capitan Marvel";
     }
     .galeryimg:nth-child(3){
-        background-image: url(/Estilos/img/ms\ marvel.jpg);
+        background-image: url(img/ms\ marvel.jpg);
         --message:"Ms Marvel";
     
       
@@ -233,3 +233,9 @@ body{
         --clip:circle(100% at center);
         --transition:clip-path 0.4s, 0.5s;
     }
+    
+  
+
+
+
+
