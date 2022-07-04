@@ -60,7 +60,7 @@ body{
 /* Busacador */
 .search{
     position:relative;
-    height:30px;
+    height:65px;
     width:100vw;
  
 
@@ -166,9 +166,70 @@ body{
             font-size: 3vw;
          }
         }
+    /*=========Contenido==========*/
+    #contenidobox{
+        background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius:10px;
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    right:0;
+    overflow: auto;
+        
+    }
+    /* ========Galeria========= */
+    .galery{
+        overflow:hidden;
+        border-radius: 10px;
+        width:50vw;
+        height:50vh;
+        display:flex;
+        position: relative;
+        margin: 0;
+         --clip:circle(0 at center);
+        --transition: clip-path .3s;
+    }
+    .galeryimg:nth-child(1){
+        background-image: url(/Estilos/img/doctor\ strange\ poster.jpg);
+        --message:"Doctor Strange";
+    }
+    .galeryimg:nth-child(2){
+        background-image: url(/Estilos/img/capitan\ marvels.jpg);
+        --message:"Capitan Marvel";
+    }
+    .galeryimg:nth-child(3){
+        background-image: url(/Estilos/img/ms\ marvel.jpg);
+        --message:"Ms Marvel";
     
-
-
-
-
-
+      
+    }
+    .galeryimg{
+        width: 60px;
+        height:100%;
+        background-position: center;
+        background-size: cover;
+        transition: flex 0.5;
+        flex:1;
+        display:grid;
+        transition: 0.5s;
+    
+       
+    }
+    .galeryimg::before{
+        content:var(--message);
+        display: grid;
+        place-items: center;
+        background-color: #1d1d1e27;
+        font-family: arial;
+        font-size: 10px;
+        color:#fff;
+        clip-path:var(--clip);
+        transition:var(--transition);
+    }
+    .galeryimg:hover{
+        flex:6;
+        --clip:circle(100% at center);
+        --transition:clip-path 0.4s, 0.5s;
+    }
