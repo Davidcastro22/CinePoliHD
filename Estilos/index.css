@@ -3,7 +3,7 @@ body{
     padding: 0;
     background: linear-gradient(45deg, #fbda61, #ff5acd);
     background-size: cover;
-    min-height: 100vh;
+    min-height:150vh;
 
 }
 
@@ -175,10 +175,37 @@ body{
     width: 50vw;
     height: 100%;
     position: absolute;
+    flex-direction: column;
     right:0;
     overflow: auto;
         
     }
+       /* #contenidobox .contenido{
+        background-position: center;
+        background-size: cover;
+        position:relative;
+        width: 45vw;
+        height: 350px;
+      margin:4vw 2vw;
+    } */
+    #contenidobox .contenido:nth-child(1){background-image: url(img/contenidobox/LIGHTYEAR\ 2022.jpg);}
+    #contenidobox .contenido:nth-child(2){background-image: url(img/contenidobox/minions\ the\ rise\ of\ gru.jpg)}
+    #contenidobox .contenido:nth-child(3){background-image: url(img/contenidobox/thor\ 2022.jpg)}
+    #contenidobox .contenido:nth-child(4){background-image: url(img/contenidobox/sonic\ 2.jpg)}
+    #contenidobox .contenido:nth-child(5){background-image: url(img/contenidobox/avatar\ 2.jpg)}
+    #contenidobox .contenido:nth-child(6){background-image: url(img/doctor\ strange\ poster.jpg)}
+    #contenidobox .contenido:nth-child(7){background-image: url(img/contenidobox/chip\ and\ dale.jpg)}
+
+    #contenidobox .contenido{
+        background-position: center;
+        background-size: cover;
+        position:relative;
+        width: 45vw;
+        height: 350px;
+      margin:4vw 2vw;
+
+    }
+
     /* ========Galeria========= */
     .galery{
         overflow:hidden;
@@ -190,6 +217,9 @@ body{
         margin: 0;
          --clip:circle(0 at center);
         --transition: clip-path .3s;
+    }
+    .galery p{
+        position:absolute;
     }
     .galeryimg:nth-child(1){
         background-image: url(img/doctor\ strange\ poster.jpg);
@@ -233,6 +263,52 @@ body{
         --clip:circle(100% at center);
         --transition:clip-path 0.4s, 0.5s;
     }
+
+    /* <!--==================Series estrenos===================== --> */
+    .series-estrenos{
+        background-position: center;
+        background-size: cover;
+        position:relative;
+        margin:0;
+        display:flex;
+        height:50vh;
+        width: 50vw;
+        overflow:hidden;
+        animation-name: cambiadorfondo3;
+        animation-duration: 30s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+
+    }
+ 
+   .font-section{
+    font-size: 4vw;
+    font-family:arial;
+    color: #fff;
+   }
+    .palomita{
+        position: absolute;
+        margin: 4vw 0 0 5px;
+        height: 6vw;
+        width:6vw;
+        right: 17px;
+    }
+ 
+    /* De Prueba */
+    @keyframes cambiadorfondo3 {
+        0%{background-image: url(img/stranger\ things.jpg) }
+        20%{background-image: url(img/stranger\ things.jpg) }
+
+        25%{background-image: url(img/vikings.jpg) }
+        50%{background-image: url(img/vikings.jpg) }
+
+        55%{background-image: url(img/Estamos\ muertos.jpg) }
+        80%{background-image: url(img/Estamos\ muertos.jpg) }
+
+        85%{background-image: url(img/la-casa-papel-core.jpg) }
+        100%{background-image: url(img/la-casa-papel-core.jpg) }
+    }
+ 
     
   
 
