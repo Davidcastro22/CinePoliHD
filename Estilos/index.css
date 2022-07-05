@@ -13,14 +13,15 @@ body{
     src: url(SuperMarioBros-ov7d.ttf);
 }
 
-/* Encabezado */
-.contenedor{
+/* ==================Header====================== */
+
+.header{
     position: relative;
     border-color: red;
     border-style: double;
     height: 200px;
 }
-.contenedor #video{
+.header #video{
     position: absolute; 
     top: 0px;
     left:0;
@@ -29,7 +30,7 @@ body{
     object-fit: cover;
 }
 
-.contenedor #texto{ 
+.header #texto{ 
     color: fuchsia;
     margin-top: 10px;
     position: absolute;
@@ -39,8 +40,7 @@ body{
     font-size: 15vw;
     mix-blend-mode: exclusion;
 }
-/* Navegacion de encabezado */
-.contenedor a{
+.header a{
     font-family: Supermario;
     color: white;
     top: 150px;
@@ -50,22 +50,22 @@ body{
     font-size:4vw;
     transition: 0.3s;
 }
-.contenedor a:hover{
+.header a:hover{
     margin:0;
     font-size: 4.5vw;
   border: white solid;
 
 }
 
-/* Busacador */
-.search{
+/* ==================Nav======================= */
+.nav{
     position:relative;
     height:65px;
     width:100vw;
  
 
 }
-.search #lupa{
+.nav #search{
     font-family: Supermario;
     font-size: 2vw; 
     color: fuchsia;
@@ -78,16 +78,15 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0.35);
     display:flex;
     justify-content:center;
-    /* align-items: center; */
     transition: 0.3s;
     overflow: hidden;
 }
-.search #lupa i{
+.nav #search label{
     position:absolute;
     top: 5px;
     transition:0.3s;
 }
-.search input{
+.nav #search #text{
     color: fuchsia;
     border:2px fuchsia solid;
   transition: 0.3s;
@@ -101,14 +100,14 @@ body{
     font-family: Supermario;
 
 }
-.search #lupa:hover{
+.nav #search:hover{
     height: 65px;
 
 }
-.search #lupa i:hover{
+.nav #search i:hover{
     border-bottom: 3px solid fuchsia;
 }
-.search input:hover{
+.nav #text:hover{
     border-color: fuchsia;
     height:20px;
 }
@@ -117,21 +116,21 @@ body{
 
     @media screen and (min-width:630px){
 
-        .contenedor #texto{
+        .header #texto{
             margin-top: 30px;
 
         }
-        .contenedor a{
+        .header a{
             font-size:2.8vw;
             margin:1.8vw 2.8vw;
          
         }
-        .contenedor a:hover{ 
+        .header a:hover{ 
             font-size: 3.5vw;
         }
     }
     @media screen and (max-width:680px){
-        .search #lupa{
+        .nav #search{
             font-size:4vw;
         }
 
@@ -139,7 +138,7 @@ body{
 
     @media screen and (max-width:480px){
       
-        .contenedor #texto{
+        .header #texto{
             position: absolute;
             top: 30px;
             left: 50%;
@@ -149,24 +148,25 @@ body{
     }
     @media screen and (min-width:750px){
 
-        .contenedor a{
+        .header a{
             margin: 1.5vw 2.5vw;
 
         }
     }
     @media screen and (min-width:850px){
-        .contenedor #texto{
+        .header #texto{
             margin-top:5px;
             font-size: 12vw;
         }
-        .contenedor a{ font-size: 2.5vw;
+        .header a{ font-size: 2.5vw;
             margin: 1.3vw 2.3vw;
         }
-         .contenedor a:hover{
+         .header a:hover{
             font-size: 3vw;
          }
         }
-    /*=========Contenido==========*/
+    /*=============Section==============*/
+
     #contenidobox{
         background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
@@ -180,14 +180,6 @@ body{
     overflow: auto;
         
     }
-       /* #contenidobox .contenido{
-        background-position: center;
-        background-size: cover;
-        position:relative;
-        width: 45vw;
-        height: 350px;
-      margin:4vw 2vw;
-    } */
     #contenidobox .contenido:nth-child(1){background-image: url(img/contenidobox/LIGHTYEAR\ 2022.jpg);}
     #contenidobox .contenido:nth-child(2){background-image: url(img/contenidobox/minions\ the\ rise\ of\ gru.jpg)}
     #contenidobox .contenido:nth-child(3){background-image: url(img/contenidobox/thor\ 2022.jpg)}
@@ -200,13 +192,13 @@ body{
         background-position: center;
         background-size: cover;
         position:relative;
-        width: 45vw;
+        width: 47vw;
         height: 350px;
       margin:4vw 2vw;
 
     }
 
-    /* ========Galeria========= */
+    /* ==============Aside Destacado================== */
     .galery{
         overflow:hidden;
         border-radius: 10px;
@@ -264,7 +256,7 @@ body{
         --transition:clip-path 0.4s, 0.5s;
     }
 
-    /* <!--==================Series estrenos===================== --> */
+    /* <!--=================Aside series===================== --> */
     .series-estrenos{
         background-position: center;
         background-size: cover;
@@ -293,8 +285,6 @@ body{
         width:6vw;
         right: 17px;
     }
- 
-    /* De Prueba */
     @keyframes cambiadorfondo3 {
         0%{background-image: url(img/stranger\ things.jpg) }
         20%{background-image: url(img/stranger\ things.jpg) }
@@ -308,10 +298,3 @@ body{
         85%{background-image: url(img/la-casa-papel-core.jpg) }
         100%{background-image: url(img/la-casa-papel-core.jpg) }
     }
- 
-    
-  
-
-
-
-
