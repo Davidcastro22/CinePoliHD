@@ -1,9 +1,12 @@
 body{
     margin:0;
     padding: 0;
-    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    /* background: linear-gradient(45deg, #fbda61, #ff5acd); */
+    background: rgb(161,68,214);
+background: linear-gradient(90deg, rgba(161,68,214,1) 0%, rgba(244,8,208,1) 54%, rgba(0,212,255,1) 100%);
     background-size: cover;
-    min-height:150vh;
+
+    /* min-height:150vh; */
 
 }
 
@@ -101,6 +104,7 @@ body{
 
 }
 .nav #search:hover{
+    cursor:pointer;
     height: 65px;
 
 }
@@ -172,11 +176,11 @@ body{
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius:10px;
-    width: 50vw;
-    height: 100%;
+    width: 51vw;
+    height:850px ;
     position: absolute;
-    flex-direction: column;
     right:0;
+    flex-direction: column;
     overflow: auto;
         
     }
@@ -197,77 +201,79 @@ body{
       margin:4vw 2vw;
 
     }
+    /* =============ASide================ */
+    .contenedor-aside{
+        position:relative;
+        height:850px;
+        width:48vw;
+    }
 
     /* ==============Aside Destacado================== */
     .galery{
         overflow:hidden;
         border-radius: 10px;
-        width:50vw;
-        height:50vh;
+        width:100%;
+        height:49.5%;
+        margin-bottom:5px;
         display:flex;
         position: relative;
-        margin: 0;
-         --clip:circle(0 at center);
-        --transition: clip-path .3s;
+    }
+    .galery article:hover{
+        flex:8;
     }
     .galery p{
         position:absolute;
+        font-size: 4vw;
+        
     }
-    .galeryimg:nth-child(1){
-        background-image: url(img/doctor\ strange\ poster.jpg);
-        --message:"Doctor Strange";
-    }
-    .galeryimg:nth-child(2){
-        background-image: url(img/capitan\ marvels.jpg);
-        --message:"Capitan Marvel";
-    }
-    .galeryimg:nth-child(3){
-        background-image: url(img/ms\ marvel.jpg);
-        --message:"Ms Marvel";
-    
-      
-    }
+    .galeryimg:nth-child(1){background-image: url(img/doctor\ strange\ poster.jpg)}
+    .galeryimg:nth-child(2){background-image: url(img/capitan\ marvels.jpg);}
+    .galeryimg:nth-child(3){background-image: url(img/ms\ marvel.jpg);}
+
     .galeryimg{
-        width: 60px;
-        height:100%;
+        display:grid;
+        position:relative;
         background-position: center;
         background-size: cover;
-        transition: flex 0.5;
         flex:1;
-        display:grid;
-        transition: 0.5s;
+       place-items: center;
+        transition: 0.4s;
+    }
     
-       
+    .galeryimg a{
+        clip-path: circle(0% at center);
+        transition: clip-path 0.3s;
+        display:grid;
+        height: 25px;
+        width:100%;
+        position:absolute;
+       place-items: center;
+        border-bottom: solid 2px white;
+        font-size: 14px;
+        font-family: Arial;
+        color:white;
+        background-color: rgba(255, 255, 255, 0.168);
     }
-    .galeryimg::before{
-        content:var(--message);
-        display: grid;
-        place-items: center;
-        background-color: #1d1d1e27;
-        font-family: arial;
-        font-size: 10px;
-        color:#fff;
-        clip-path:var(--clip);
-        transition:var(--transition);
-    }
-    .galeryimg:hover{
-        flex:6;
-        --clip:circle(100% at center);
-        --transition:clip-path 0.4s, 0.5s;
+  
+    .galeryimg:hover >a{
+        clip-path: circle(100% at center);
+        transition: clip-path 0.4s .3s;
     }
 
     /* <!--=================Aside series===================== --> */
     .series-estrenos{
+        overflow:hidden;
+        border-radius:10px;
         background-position: center;
         background-size: cover;
         position:relative;
         margin:0;
         display:flex;
-        height:50vh;
-        width: 50vw;
+        height:50%;
+        width: 100%;
         overflow:hidden;
         animation-name: cambiadorfondo3;
-        animation-duration: 30s;
+        animation-duration: 20s;
         animation-direction: alternate;
         animation-iteration-count: infinite;
 
@@ -297,4 +303,67 @@ body{
 
         85%{background-image: url(img/la-casa-papel-core.jpg) }
         100%{background-image: url(img/la-casa-papel-core.jpg) }
+    }
+    /* ========Boton Vermas peliculas========= */
+    #Ver-mas{
+        position:relative;
+        width:100%;
+        height:150px;
+    }
+    #Ver-mas button{
+        position:relative;
+        background-color: white;
+        width:100%;
+        height: 50%;
+        font-family: Supermario;
+        font-size:5vw;
+    }
+    #Ver-mas p{
+        text-align: center;
+        color: white;
+        font-family: arial;
+        font-size: 10px;
+        /* margin: 10px 0; */
+
+    }
+    /* ============Footer================== */
+
+    /* footer Info */
+    .footer-1{
+        border-top: solid 3px white;
+        background: rgb(0,0,0);
+        position:relative;
+        background: rgb(0,0,0);
+background: linear-gradient(39deg, rgba(0,0,0,1) 0%, rgba(77,55,74,1) 50%, rgba(130,34,125,1) 59%, rgba(240,68,232,1) 70%, rgba(69,252,250,1) 100%);
+        width:100%;
+        height:150px;
+        display:flex;
+    }
+    footer a{
+        font-size:10px;
+        display:flex;
+        flex-direction: column;
+        margin-bottom:10px;
+        color:white;
+        text-decoration: double;
+      
+    }
+    footer div{
+        position:relative;
+        color:white;
+       text-align: center;
+        /* border: solid 2px red; */
+        flex:1;
+
+    }
+    .footer-2{
+        font-size: 14px;
+        font-family: arial;
+        
+        background: white;
+        /* background: linear-gradient(107deg, rgba(31,31,31,1) 0%, rgba(106,122,122,1) 100%); */
+        position:relative;
+        width:100%;
+        height:50px;
+
     }
