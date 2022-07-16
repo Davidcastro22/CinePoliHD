@@ -1,369 +1,98 @@
-body{
-    margin:0;
-    padding: 0;
-    /* background: linear-gradient(45deg, #fbda61, #ff5acd); */
-    background: rgb(161,68,214);
-background: linear-gradient(90deg, rgba(161,68,214,1) 0%, rgba(244,8,208,1) 54%, rgba(0,212,255,1) 100%);
-    background-size: cover;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CInePoliHD</title>
+    <link rel="stylesheet" href="Estilos/index.css">
+    <link rel="stylesheet" href="SuperMarioBros-ov7d.ttf">  
+    <link rel="stylesheet" href="https://fontawesome.com/v6/docs/web/setup/get-started">
+  </head>
+<body>
+    <!-- Encabezado -->
+<header class="header">
+      <!-- <video id="video" autoplay muted preload loop src="Estilos/Fondotexto.mp4"></video> -->
+      <h1 id="texto"> CinePoliHd</h1> 
+      <a href="#">Inicio</a>
+      <a href="#">Buscar</a>
+      <a href="#">Ultimos estrenos</a>
+      <a href="#">Contacto</a>
+    </header>
+   <!-- =================================== -->
 
-    /* min-height:150vh; */
+  <!-- ===============nav==================== -->
+  <nav class="nav">
+    <div id="search">
+      <label for="text">Buscar Cartelera</label>
+      <input id="text"  type="text" required>
+    </div>
+  </nav>
+  <!-- ===================================== -->
 
-}
+  <!-- contenido-->
+    <section id="contenidobox">
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+       <article class="contenido"></article>
+    </section>
 
+    <!-- ============Seccion mas destacada=================== -->
+<div class="contenedor-aside" >
+    <aside class="galery">
+     <article class="galeryimg"><a href="" target="_blank">Doctor Strange </a></article>
+     <article class="galeryimg"><a href="" target="_blank">Capitan Marvel</a></article>
+     <article class="galeryimg"><a href="" target="_blank">Ms Marvel</a></article>
+      <p class="font-section">Seccion destacada </p>
+      <img class="palomita" src="Estilos/img/Popcorn.png" alt="">
+    </aside>
+     
 
-@font-face {
-    font-family: Supermario;
-    src: url(SuperMarioBros-ov7d.ttf);
-}
-
-/* ==================Header====================== */
-
-.header{
-    position: relative;
-    border-color: red;
-    border-style: double;
-    height: 200px;
-}
-.header #video{
-    position: absolute; 
-    top: 0px;
-    left:0;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.header #texto{ 
-    color: fuchsia;
-    margin-top: 10px;
-    position: absolute;
-    left: 50%;
-    transform: translatex(-50%);
-    font-family: supermario;
-    font-size: 15vw;
-    mix-blend-mode: exclusion;
-}
-.header a{
-    font-family: Supermario;
-    color: white;
-    top: 150px;
-    position: relative;
-    text-decoration: none;
-    margin: 2vw 3vw;
-    font-size:4vw;
-    transition: 0.3s;
-}
-.header a:hover{
-    margin:0;
-    font-size: 4.5vw;
-  border: white solid;
-
-}
-
-/* ==================Nav======================= */
-.nav{
-    position:relative;
-    height:65px;
-    width:100vw;
- 
-
-}
-.nav #search{
-    font-family: Supermario;
-    font-size: 2vw; 
-    color: fuchsia;
-    position: absolute;
-    margin:0 10vw;
-    width: 80vw;
-    height: 30px;
-    border-radius:50px;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0.35);
-    display:flex;
-    justify-content:center;
-    transition: 0.3s;
-    overflow: hidden;
-}
-.nav #search label{
-    position:absolute;
-    top: 5px;
-    transition:0.3s;
-}
-.nav #search #text{
-    color: fuchsia;
-    border:2px fuchsia solid;
-  transition: 0.3s;
-    position: absolute;
-    top:25px;
-     margin:7px 10vw;
-    width: 50vw;
-    height: 10px;
-    border-radius:50px;
-    font-size: 20px;
-    font-family: Supermario;
-
-}
-.nav #search:hover{
-    cursor:pointer;
-    height: 65px;
-
-}
-.nav #search i:hover{
-    border-bottom: 3px solid fuchsia;
-}
-.nav #text:hover{
-    border-color: fuchsia;
-    height:20px;
-}
-
-    /* Responsive */
-
-    @media screen and (min-width:630px){
-
-        .header #texto{
-            margin-top: 30px;
-
-        }
-        .header a{
-            font-size:2.8vw;
-            margin:1.8vw 2.8vw;
-         
-        }
-        .header a:hover{ 
-            font-size: 3.5vw;
-        }
-    }
-    @media screen and (max-width:680px){
-        .nav #search{
-            font-size:4vw;
-        }
-
-    }
-
-    @media screen and (max-width:480px){
-      
-        .header #texto{
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translatex(-50%);
-            font-size: 17vw;
-        }
-    }
-    @media screen and (min-width:750px){
-
-        .header a{
-            margin: 1.5vw 2.5vw;
-
-        }
-    }
-    @media screen and (min-width:850px){
-        .header #texto{
-            margin-top:5px;
-            font-size: 12vw;
-        }
-        .header a{ font-size: 2.5vw;
-            margin: 1.3vw 2.3vw;
-        }
-         .header a:hover{
-            font-size: 3vw;
-         }
-        }
-    /*=============Section==============*/
-
-    #contenidobox{
-        background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius:10px;
-    width: 51vw;
-    height:850px ;
-    position: absolute;
-    right:0;
-    flex-direction: column;
-    overflow: auto;
-        
-    }
-    #contenidobox .contenido:nth-child(1){background-image: url(img/contenidobox/LIGHTYEAR\ 2022.jpg);}
-    #contenidobox .contenido:nth-child(2){background-image: url(img/contenidobox/minions\ the\ rise\ of\ gru.jpg)}
-    #contenidobox .contenido:nth-child(3){background-image: url(img/contenidobox/thor\ 2022.jpg)}
-    #contenidobox .contenido:nth-child(4){background-image: url(img/contenidobox/sonic\ 2.jpg)}
-    #contenidobox .contenido:nth-child(5){background-image: url(img/contenidobox/avatar\ 2.jpg)}
-    #contenidobox .contenido:nth-child(6){background-image: url(img/doctor\ strange\ poster.jpg)}
-    #contenidobox .contenido:nth-child(7){background-image: url(img/contenidobox/chip\ and\ dale.jpg)}
-
-    #contenidobox .contenido{
-        background-position: center;
-        background-size: cover;
-        position:relative;
-        width: 47vw;
-        height: 350px;
-      margin:4vw 2vw;
-
-    }
-    /* =============ASide================ */
-    .contenedor-aside{
-        position:relative;
-        height:850px;
-        width:48vw;
-    }
-
-    /* ==============Aside Destacado================== */
-    .galery{
-        overflow:hidden;
-        border-radius: 10px;
-        width:100%;
-        height:49.5%;
-        margin-bottom:5px;
-        display:flex;
-        position: relative;
-    }
-    .galery article:hover{
-        flex:8;
-    }
-    .galery p{
-        position:absolute;
-        font-size: 4vw;
-        
-    }
-    .galeryimg:nth-child(1){background-image: url(img/doctor\ strange\ poster.jpg)}
-    .galeryimg:nth-child(2){background-image: url(img/capitan\ marvels.jpg);}
-    .galeryimg:nth-child(3){background-image: url(img/ms\ marvel.jpg);}
-
-    .galeryimg{
-        display:grid;
-        position:relative;
-        background-position: center;
-        background-size: cover;
-        flex:1;
-       place-items: center;
-        transition: 0.4s;
-    }
-    
-    .galeryimg a{
-        clip-path: circle(0% at center);
-        transition: clip-path 0.3s;
-        display:grid;
-        height: 25px;
-        width:100%;
-        position:absolute;
-       place-items: center;
-        border-bottom: solid 2px white;
-        font-size: 14px;
-        font-family: Arial;
-        color:white;
-        background-color: rgba(255, 255, 255, 0.168);
-    }
+  <!--======================================= -->
   
-    .galeryimg:hover >a{
-        clip-path: circle(100% at center);
-        transition: clip-path 0.4s .3s;
-    }
+    <!--=================Series en estrenos====================== -->
+    <aside class="series-estrenos">
+    <p class="font-section">Series en estrenos</p>
+    <img class="palomita" src="Estilos/img/Popcorn.png" alt="">
+  </aside>
+</div>
+    <!-- ======================================================== -->
 
-    /* <!--=================Aside series===================== --> */
-    .series-estrenos{
-        overflow:hidden;
-        border-radius:10px;
-        background-position: center;
-        background-size: cover;
-        position:relative;
-        margin:0;
-        display:flex;
-        height:50%;
-        width: 100%;
-        overflow:hidden;
-        animation-name: cambiadorfondo3;
-        animation-duration: 20s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
+    <!--================Ver mas info extra============= -->
+    <section id="Ver-mas">
+      <button>Mas Peliculas</button>
+      <p>CinePoliHD <br>
+         ver o descargar películas full hd gratis en 1 LINK <br>
+        Descargar películas. Ver películas online. <br>
+         Cine en casa gratis. Películas online
+         y para descargar en 1 link. <br>
+          Excelente calidad brrip (720p/1080p)</p>
+    </section>
+    <!-- ========================Footer======================== -->
+    <!-- <hr> -->
+    <footer class="footer-1">
+      <div>
+         <h2>Secciones</h2>
+         <a href="">Contenido</a><a href="">Destacados</a><a href="">Series</a>
+      </div>
+      <div>
+        <h2>Redes</h2>
+        <a href="">Instagram</a><a href="">Facebook</a><a href="">Youtube</a>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <a href="">Gmail</a><a href="">whatsapp</a>
+      </div>
+    </footer>
+    <footer class="footer-2">
+      <p>En CinePoliHD hay películas online en excelente calidad Bluray 4K 2160p, Full HD 1080p, audio latino,
+         gratis, sin registro y toda la información.</p>
+    </footer>
+    <!-- poner musica en la pantalla de inicio study time youtube -->
 
-    }
- 
-   .font-section{
-    font-size: 4vw;
-    font-family:arial;
-    color: #fff;
-   }
-    .palomita{
-        position: absolute;
-        margin: 4vw 0 0 5px;
-        height: 6vw;
-        width:6vw;
-        right: 17px;
-    }
-    @keyframes cambiadorfondo3 {
-        0%{background-image: url(img/stranger\ things.jpg) }
-        20%{background-image: url(img/stranger\ things.jpg) }
-
-        25%{background-image: url(img/vikings.jpg) }
-        50%{background-image: url(img/vikings.jpg) }
-
-        55%{background-image: url(img/Estamos\ muertos.jpg) }
-        80%{background-image: url(img/Estamos\ muertos.jpg) }
-
-        85%{background-image: url(img/la-casa-papel-core.jpg) }
-        100%{background-image: url(img/la-casa-papel-core.jpg) }
-    }
-    /* ========Boton Vermas peliculas========= */
-    #Ver-mas{
-        position:relative;
-        width:100%;
-        height:150px;
-    }
-    #Ver-mas button{
-        position:relative;
-        background-color: white;
-        width:100%;
-        height: 50%;
-        font-family: Supermario;
-        font-size:5vw;
-    }
-    #Ver-mas p{
-        text-align: center;
-        color: white;
-        font-family: arial;
-        font-size: 10px;
-        /* margin: 10px 0; */
-
-    }
-    /* ============Footer================== */
-
-    /* footer Info */
-    .footer-1{
-        border-top: solid 3px white;
-        background: rgb(0,0,0);
-        position:relative;
-        background: rgb(0,0,0);
-background: linear-gradient(39deg, rgba(0,0,0,1) 0%, rgba(77,55,74,1) 50%, rgba(130,34,125,1) 59%, rgba(240,68,232,1) 70%, rgba(69,252,250,1) 100%);
-        width:100%;
-        height:150px;
-        display:flex;
-    }
-    footer a{
-        font-size:10px;
-        display:flex;
-        flex-direction: column;
-        margin-bottom:10px;
-        color:white;
-        text-decoration: double;
-      
-    }
-    footer div{
-        position:relative;
-        color:white;
-       text-align: center;
-        /* border: solid 2px red; */
-        flex:1;
-
-    }
-    .footer-2{
-        font-size: 14px;
-        font-family: arial;
-        
-        background: white;
-        /* background: linear-gradient(107deg, rgba(31,31,31,1) 0%, rgba(106,122,122,1) 100%); */
-        position:relative;
-        width:100%;
-        height:50px;
-
-    }
+</body>
+</html>
