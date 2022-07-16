@@ -4,95 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CInePoliHD</title>
-    <link rel="stylesheet" href="Estilos/index.css">
-    <link rel="stylesheet" href="SuperMarioBros-ov7d.ttf">  
-    <link rel="stylesheet" href="https://fontawesome.com/v6/docs/web/setup/get-started">
-  </head>
+    <link rel="stylesheet" href="estilos/Game.css">
+    <title> Juego de Memoria</title>
+</head>
 <body>
-    <!-- Encabezado -->
-<header class="header">
-      <video id="video" autoplay muted preload loop src="Estilos/Fondotexto.mp4"></video>
-      <h1 id="texto"> CinePoliHd</h1> 
-      <a href="#">Inicio</a>
-      <a href="#">Buscar</a>
-      <a href="#">Ultimos estrenos</a>
-      <a href="#">Contacto</a>
-    </header>
-   <!-- =================================== -->
+    <audio autoplay preload="" loop src="/estilos/audios/principal.mp3"></audio>
+    <h1 id="h1">Memoriza el pokemon</h1>
+    <h1 id="h2"><img src="estilos/img/6.png" alt=""><img src="estilos/img/7.png" alt=""><img src="estilos/img/3.png" alt=""> </h1>
 
-  <!-- ===============nav==================== -->
-  <nav class="nav">
-    <div id="search">
-      <label for="text">Buscar Cartelera</label>
-      <input id="text"  type="text" required>
-    </div>
-  </nav>
-  <!-- ===================================== -->
+    <main id="">
+        <section class="section1">
+            <button id="0" onclick="destapar(0)"></button>
+            <button id="1" onclick="destapar(1)"></button>
+            <button id="2" onclick="destapar(2)"></button>
+            <button id="3" onclick="destapar(3)"></button>
 
-  <!-- contenido-->
-    <section id="contenidobox">
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-       <article class="contenido"></article>
-    </section>
+            <button id="4" onclick="destapar(4)"></button>
+            <button id="5" onclick="destapar(5)"></button>
+            <button id="6" onclick="destapar(6)"></button>
+            <button id="7" onclick="destapar(7)"></button>
 
-    <!-- ============Seccion mas destacada=================== -->
-<div class="contenedor-aside" >
-    <aside class="galery">
-     <article class="galeryimg"><a href="" target="_blank">Doctor Strange </a></article>
-     <article class="galeryimg"><a href="" target="_blank">Capitan Marvel</a></article>
-     <article class="galeryimg"><a href="" target="_blank">Ms Marvel</a></article>
-      <p class="font-section">Seccion destacada </p>
-      <img class="palomita" src="Estilos/img/Popcorn.png" alt="">
-    </aside>
-     
+            <button id="8" onclick="destapar(8)"></button>
+            <button id="9" onclick="destapar(9)"></button>
+            <button id="10" onclick="destapar(10)"></button>
+            <button id="11" onclick="destapar(11)"></button>
+            <button id="12" onclick="destapar(12)"></button>
+            <button id="13" onclick="destapar(13)"></button>
+            <button id="14" onclick="destapar(14)"></button>
+            <button id="15" onclick="destapar(15)"></button>
+        </section>
+        <section class="section2">
+            <h2 id="aciertos" class="estadisticas">aciertos: 0</h2>
+            <h2 id="time" class="estadisticas"> tiempo: 30 segundos </h2>
+            <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
 
-  <!--======================================= -->
-  
-    <!--=================Series en estrenos====================== -->
-    <aside class="series-estrenos">
-    <p class="font-section">Series en estrenos</p>
-    <img class="palomita" src="Estilos/img/Popcorn.png" alt="">
-  </aside>
-</div>
-    <!-- ======================================================== -->
-
-    <!--================Ver mas info extra============= -->
-    <section id="Ver-mas">
-      <button>Mas Peliculas</button>
-      <p>CinePoliHD <br>
-         ver o descargar películas full hd gratis en 1 LINK <br>
-        Descargar películas. Ver películas online. <br>
-         Cine en casa gratis. Películas online
-         y para descargar en 1 link. <br>
-          Excelente calidad brrip (720p/1080p)</p>
-    </section>
-    <!-- ========================Footer======================== -->
-    <!-- <hr> -->
-    <footer class="footer-1">
-      <div>
-         <h2>Secciones</h2>
-         <a href="">Contenido</a><a href="">Destacados</a><a href="">Series</a>
-      </div>
-      <div>
-        <h2>Redes</h2>
-        <a href="">Instagram</a><a href="">Facebook</a><a href="">Youtube</a>
-      </div>
-      <div>
-        <h2>Contacto</h2>
-        <a href="">Gmail</a><a href="">whatsapp</a>
-      </div>
+        </section>
+    </main>
+    <h1 id="fallaste">Fallaste</h1>
+    <a href="index.html" id="reintentar">Reintentar</a>
+    <footer>
+        <p>Juego programado por David Castro</p>
     </footer>
-    <footer class="footer-2">
-      <p>En CinePoliHD hay películas online en excelente calidad Bluray 4K 2160p, Full HD 1080p, audio latino,
-         gratis, sin registro y toda la información.</p>
-    </footer>
-    <!-- poner musica en la pantalla de inicio study time youtube -->
-
+    
+    <script src="Game.js"></script>
 </body>
 </html>
