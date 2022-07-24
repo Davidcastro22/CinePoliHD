@@ -1,5 +1,5 @@
 // musica fondo
-const musica=new Audio('./lofi.mp3');
+const musica=new Audio('./Estilos/audios/lofi.mp3');
 function entrar(){
     setInterval(() => {
         intro.style.display='none';
